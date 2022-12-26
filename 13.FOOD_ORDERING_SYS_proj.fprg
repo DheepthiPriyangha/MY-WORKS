@@ -1,0 +1,1832 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="HARISH S"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-07-07 11:11:25 AM"/>
+        <attribute name="created" value="SEFSSVNIIFM7REVTS1RPUC0zTFZEN1U5OzIwMjEtMDEtMjk7MDY6NDg6NDAgUE07MjkwNg=="/>
+        <attribute name="edited" value="SEFSSVNIIFM7REVTS1RPUC0zTFZEN1U5OzIwMjEtMDItMDM7MDY6NDU6NTIgUE07MTtIQVJJU0ggUztERVNLVE9QLTNMVkQ3VTk7MjAyMS0wMS0yOTswNjo0ODo0MCBQTTtGT09EX09SREVSSU5HX1NZUy5mcHJnOzc4NTE="/>
+        <attribute name="edited" value="SEFSSVNIIFM7REVTS1RPUC0zTFZEN1U5OzIwMjEtMDItMDM7MDg6MDA6MzYgUE07MTtIQVJJU0ggUztERVNLVE9QLTNMVkQ3VTk7MjAyMS0wMS0yOTswNjo0ODo0MCBQTTtGT09EX09SREVSSU5HX1NZUyAxLmZwcmc7NzkyNw=="/>
+        <attribute name="edited" value="SEFSSVNIIFM7REVTS1RPUC0zTFZEN1U5OzIwMjEtMDItMDQ7MDc6MDQ6MTggUE07MTtIQVJJU0ggUztERVNLVE9QLTNMVkQ3VTk7MjAyMS0wMi0wNDswNjo0ODo0NiBQTTs1OTcx"/>
+        <attribute name="edited" value="U2FrdGhpO0xBUFRPUC1EUExFTUk4QTsyMDIxLTAyLTA1OzAxOjA0OjQyIFBNOzM7MzA2Mg=="/>
+        <attribute name="edited" value="SEFSSVNIIFM7REVTS1RPUC0zTFZEN1U5OzIwMjEtMDctMDc7MTE6MTE6MjUgQU07Mjk7MzA0OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="user, ch" type="String" array="False" size=""/>
+            <comment text="temporary&#13;&#10;"/>
+            <declare name="termkey" type="Integer" array="True" size="1"/>
+            <assign variable="termkey[0]" expression="1"/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <assign variable="total" expression="0"/>
+            <declare name="dlen1, dlen2, dlen3, dlen4, i, hlen1, hlen2, hlen3, hlen4, customerbfrlen, st" type="Integer" array="False" size=""/>
+            <assign variable="customerbfrlen" expression="10"/>
+            <assign variable="st" expression="0"/>
+            <declare name="customerbufferqty, qty1, qty2, qty3, qty4" type="Integer" array="True" size="20"/>
+            <for variable="i" start="0" end="19" direction="inc" step="1">
+                <assign variable="qty1[i]" expression="0"/>
+                <assign variable="qty2[i]" expression="0"/>
+                <assign variable="qty3[i]" expression="0"/>
+                <assign variable="qty4[i]" expression="0"/>
+            </for>
+            <declare name="c1, c2, c3, c4, customerbuffercost, customerbufferamount" type="Real" array="True" size="20"/>
+            <declare name="d1, d2, d3, d4, h1, h2, h3, h4, customerbuffername, customerbufferhotelname, arr1, arr2" type="String" array="True" size="20"/>
+            <for variable="i" start="0" end="19" direction="inc" step="1">
+                <assign variable="customerbuffername[i]" expression="&quot; &quot;"/>
+                <assign variable="customerbufferhotelname[i]" expression="&quot; &quot;"/>
+                <assign variable="customerbuffercost[i]" expression="0"/>
+                <assign variable="customerbufferamount[i]" expression="0"/>
+                <assign variable="customerbufferqty[i]" expression="0"/>
+            </for>
+            <declare name="userarrlen" type="Integer" array="False" size=""/>
+            <assign variable="userarrlen" expression="20"/>
+            <for variable="i" start="0" end="userarrlen-1" direction="inc" step="1">
+                <assign variable="arr1[i]" expression="&quot;login&quot;"/>
+                <assign variable="arr2[i]" expression="&quot;login&quot;"/>
+            </for>
+            <assign variable="d1[0]" expression="&quot;idli&quot;"/>
+            <assign variable="d1[1]" expression="&quot;dosa&quot;"/>
+            <assign variable="d1[2]" expression="&quot;poori&quot;"/>
+            <assign variable="d1[3]" expression="&quot;vada&quot;"/>
+            <assign variable="dlen1" expression="20"/>
+            <for variable="i" start="4" end="dlen1-1" direction="inc" step="1">
+                <assign variable="d1[i]" expression="&quot; &quot;"/>
+            </for>
+            <assign variable="d2[0]" expression="&quot;chole bature&quot;"/>
+            <assign variable="d2[1]" expression="&quot;pav bhaji&quot;"/>
+            <assign variable="d2[2]" expression="&quot;stuffed parotta&quot;"/>
+            <assign variable="d2[3]" expression="&quot;vada pav&quot;"/>
+            <assign variable="dlen2" expression="10"/>
+            <for variable="i" start="4" end="dlen2-1" direction="inc" step="1">
+                <assign variable="d2[i]" expression="&quot; &quot;"/>
+            </for>
+            <assign variable="d3[0]" expression="&quot;Hakka Noodles&quot;"/>
+            <assign variable="d3[1]" expression="&quot;Manchurian&quot;"/>
+            <assign variable="d3[2]" expression="&quot;Fried rice&quot;"/>
+            <assign variable="d3[3]" expression="&quot;chinese noodles&quot;"/>
+            <assign variable="dlen3" expression="20"/>
+            <for variable="i" start="4" end="dlen3-1" direction="inc" step="1">
+                <assign variable="d3[i]" expression="&quot; &quot;"/>
+            </for>
+            <assign variable="d4[0]" expression="&quot;veg sandwich&quot;"/>
+            <assign variable="d4[1]" expression="&quot;burger&quot;"/>
+            <assign variable="d4[2]" expression="&quot;pizza&quot;"/>
+            <assign variable="d4[3]" expression="&quot;veg nuggets&quot;"/>
+            <assign variable="dlen4" expression="20"/>
+            <for variable="i" start="4" end="dlen4-1" direction="inc" step="1">
+                <assign variable="d4[i]" expression="&quot; &quot;"/>
+            </for>
+            <assign variable="h1[0]" expression="&quot;South food express&quot;"/>
+            <assign variable="h1[1]" expression="&quot;A2B restaurant&quot;"/>
+            <assign variable="h1[2]" expression="&quot;AAA hotel&quot;"/>
+            <assign variable="h1[3]" expression="&quot;ABCD RESTAURANT&quot;"/>
+            <assign variable="hlen1" expression="20"/>
+            <for variable="i" start="4" end="hlen1-1" direction="inc" step="1">
+                <assign variable="h1[i]" expression="&quot; &quot;"/>
+            </for>
+            <assign variable="h2[0]" expression="&quot;AB restaurant&quot;"/>
+            <assign variable="h2[1]" expression="&quot;KG foods&quot;"/>
+            <assign variable="h2[2]" expression="&quot;XYZ restaurant&quot;"/>
+            <assign variable="h2[3]" expression="&quot;BOMBAY RESTAURANT&quot;"/>
+            <assign variable="hlen2" expression="20"/>
+            <for variable="i" start="4" end="hlen2-1" direction="inc" step="1">
+                <assign variable="h2[i]" expression="&quot; &quot;"/>
+            </for>
+            <assign variable="h3[0]" expression="&quot;chopsticks&quot;"/>
+            <assign variable="h3[1]" expression="&quot;GS foods&quot;"/>
+            <assign variable="h3[2]" expression="&quot;Shahi grills&quot;"/>
+            <assign variable="h3[3]" expression="&quot;SMS RESTAURANT&quot;"/>
+            <assign variable="hlen3" expression="20"/>
+            <for variable="i" start="4" end="hlen3-1" direction="inc" step="1">
+                <assign variable="h3[i]" expression="&quot; &quot;"/>
+            </for>
+            <assign variable="h4[0]" expression="&quot;KFC &quot;"/>
+            <assign variable="h4[1]" expression="&quot;Mc Donalds&quot;"/>
+            <assign variable="h4[2]" expression="&quot;pizza hut&quot;"/>
+            <assign variable="h4[3]" expression="&quot;BURGER KING&quot;"/>
+            <assign variable="hlen4" expression="20"/>
+            <for variable="i" start="4" end="hlen4-1" direction="inc" step="1">
+                <assign variable="h4[i]" expression="&quot; &quot;"/>
+            </for>
+            <for variable="i" start="0" end="3" direction="inc" step="1">
+                <assign variable="c1[i]" expression="30"/>
+                <assign variable="c2[i]" expression="40"/>
+                <assign variable="c3[i]" expression="50"/>
+                <assign variable="c4[i]" expression="60"/>
+            </for>
+            <for variable="i" start="4" end="19" direction="inc" step="1">
+                <assign variable="c1[i]" expression="0"/>
+                <assign variable="c2[i]" expression="0"/>
+                <assign variable="c3[i]" expression="0"/>
+                <assign variable="c4[i]" expression="0"/>
+            </for>
+            <do expression="ch==&quot;y&quot;||ch==&quot;Y&quot;">
+                <do expression="user!=&quot;customer&quot;||user!=&quot;admin&quot;||st!=-1">
+                    <output expression="&quot;ARE YOU ADMIN OR CUSTOMER&quot;" newline="True"/>
+                    <input variable="user"/>
+                    <if expression="user==&quot;customer&quot;">
+                        <then>
+                            <call expression="account(arr1,arr2,userarrlen)"/>
+                            <do expression="termkey[0]==0">
+                                <call expression="search(d1,d2,d3,d4,h1,h2,h3,h4,qty1,qty2,qty3,qty4,dlen1,dlen2,dlen3,dlen4,hlen1,hlen2,hlen3,hlen4,c1,c2,c3,c4,customerbufferqty,customerbuffername,customerbufferamount,customerbufferhotelname,customerbuffercost,customerbfrlen)"/>
+                                <assign variable="total" expression="total+billing(customerbuffername,customerbufferamount,customerbufferhotelname,customerbuffercost,customerbfrlen,customerbufferqty,termkey)"/>
+                            </do>
+                            <output expression="&quot;order placed succesfully&quot;" newline="True"/>
+                            <output expression="&quot;NET AMOUNT TO BE PAID :&quot;&amp;total" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="user==&quot;admin&quot;">
+                                <then>
+                                    <call expression="admin(d1,d2,d3,d4,h1,h2,h3,h4,qty1,qty2,qty3,qty4,dlen1,dlen2,dlen3,dlen4,hlen1,hlen2,hlen3,hlen4,c1,c2,c3,c4,customerbufferqty,customerbuffername,customerbufferamount,customerbufferhotelname,customerbuffercost,customerbfrlen)&#13;&#10;"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                    <assign variable="st" expression="-1"/>
+                    <assign variable="total" expression="0"/>
+                    <for variable="i" start="0" end="19" direction="inc" step="1">
+                        <assign variable="customerbuffername[i]" expression="&quot; &quot;"/>
+                        <assign variable="customerbufferhotelname[i]" expression="&quot; &quot;"/>
+                        <assign variable="customerbufferamount[i]" expression="0"/>
+                        <assign variable="customerbuffercost[i]" expression="0"/>
+                    </for>
+                </do>
+                <output expression="&quot;DO YOU WANT TO CONTINUE(&#13;&#10;Y/N):&quot;" newline="True"/>
+                <input variable="ch"/>
+            </do>
+        </body>
+    </function>
+    <function name="account" type="None" variable="">
+        <parameters>
+            <parameter name="arr1" type="String" array="True"/>
+            <parameter name="arr2" type="String" array="True"/>
+            <parameter name="arrlen" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="chk" type="Integer" array="False" size=""/>
+            <assign variable="chk" expression="1"/>
+            <declare name="login, i, j, k, a, b" type="Integer" array="False" size=""/>
+            <declare name="u, pwd, ch" type="String" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <assign variable="b" expression="0"/>
+            <assign variable="a" expression="0"/>
+            <output expression="&quot;CUSTOMER&quot;&amp;TOCHAR(13)&amp;&quot;===========&quot;&amp;tochar(13)&amp;&quot;1. LOGIN (already a user ?)&quot;&amp;tochar(13)&amp;&quot;2. SIGN UP (new user ?)&quot;" newline="True"/>
+            <input variable="login"/>
+            <while expression="login!=1&amp;&amp;login!=2">
+                <output expression="&quot;PLEASE enter a VALID option&quot;" newline="True"/>
+                <input variable="login"/>
+            </while>
+            <if expression="login==1">
+                <then>
+                    <if expression="i==0">
+                        <then>
+                            <output expression="&quot;THERE ARE NO REGISTERED ACCOUNTS&quot;" newline="True"/>
+                            <call expression="main"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <output expression="&quot;LOGIN&quot;&amp;TOCHAR(13)&amp;&quot;======&quot;" newline="True"/>
+                    <do expression="b==-1">
+                        <if expression="b=-1">
+                            <then>
+                                <output expression="&quot;ENTER A VALID USERNAME AND PASSWORD :&quot;" newline="True"/>
+                            </then>
+                            <else/>
+                        </if>
+                        <output expression="&quot;ENTER YOUR USERNAME :&quot;" newline="True"/>
+                        <input variable="u"/>
+                        <for variable="j" start="0" end="arrlen-1" direction="inc" step="1">
+                            <if expression="arr1[j]==u">
+                                <then>
+                                    <assign variable="a" expression="-1"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </for>
+                        <if expression="a!=-1">
+                            <then>
+                                <output expression="&quot;ENTER A VALID USERNAME&quot;" newline="True"/>
+                            </then>
+                            <else/>
+                        </if>
+                        <output expression="&quot;ENTER YOUR PASSWORD :&quot;" newline="True"/>
+                        <input variable="pwd"/>
+                        <for variable="j" start="0" end="arrlen-1" direction="inc" step="1">
+                            <if expression="arr1[j]==u">
+                                <then>
+                                    <if expression="arr2[j]==pwd">
+                                        <then>
+                                            <output expression="&quot;YOU have SUUCESSFULLY LOGGED in&quot;" newline="True"/>
+                                            <assign variable="b" expression="0"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;USERNAME and PASSWORD does NOT match&quot;" newline="True"/>
+                                            <assign variable="b" expression="-1"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else/>
+                            </if>
+                        </for>
+                        <if expression="b==-1">
+                            <then>
+                                <assign variable="a" expression="-1"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </do>
+                </then>
+                <else>
+                    <declare name="mail, pwd1, mobile" type="String" array="False" size=""/>
+                    <declare name="age" type="Integer" array="False" size=""/>
+                    <output expression="&quot;SIGN UP&quot;&amp;TOCHAR(13)&amp;&quot;======&quot;" newline="True"/>
+                    <output expression="&quot;ENTER YOUR USERNAME :&quot;" newline="True"/>
+                    <input variable="arr1[i]"/>
+                    <do expression="age&lt;=0">
+                        <output expression="&quot;enter valid age&quot;" newline="True"/>
+                        <input variable="age"/>
+                    </do>
+                    <do expression="(len(mail)&lt;=5)||(chk==1)">
+                        <output expression="&quot;enter valid email address&quot;" newline="True"/>
+                        <input variable="mail"/>
+                        <assign variable="k" expression="0"/>
+                        <while expression="k&lt;len(mail)">
+                            <if expression="char(mail,k)==&quot;@&quot;">
+                                <then>
+                                    <assign variable="chk" expression="0"/>
+                                </then>
+                                <else/>
+                            </if>
+                            <assign variable="k" expression="k+1"/>
+                        </while>
+                    </do>
+                    <do expression="(len(arr2[i])&lt;=8)||(len(arr2[i])&gt;=12)">
+                        <output expression="&quot;ENTER YOUR PASSWORD :&quot;" newline="True"/>
+                        <input variable="arr2[i]"/>
+                    </do>
+                    <do expression="pwd1!=arr2[i]">
+                        <output expression="&quot;RE-ENTER YOUR PASSWORD :&quot;" newline="True"/>
+                        <input variable="pwd1"/>
+                    </do>
+                    <declare name="FLAG" type="Integer" array="False" size=""/>
+                    <assign variable="FLAG" expression="0"/>
+                    <do expression="(FLAG==0)||(len(mobile)!=10)">
+                        <output expression="&quot;ENTER MOBILE NUMBER&quot;" newline="True"/>
+                        <input variable="mobile"/>
+                        <for variable="i" start="0" end="len(mobile)-1" direction="inc" step="1">
+                            <if expression="(char(mobile,i)&gt;=tochar(48))||(char(mobile,i)&lt;=tochar(57))">
+                                <then>
+                                    <assign variable="FLAG" expression="1"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </for>
+                    </do>
+                    <assign variable="i" expression="i+1"/>
+                    <output expression="&quot;ACCOUNT CREATED SUCCESFULLY&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="admin" type="None" variable="">
+        <parameters>
+            <parameter name="dishc1" type="String" array="True"/>
+            <parameter name="dishc2" type="String" array="True"/>
+            <parameter name="dishc3" type="String" array="True"/>
+            <parameter name="dishc4" type="String" array="True"/>
+            <parameter name="hotelc1" type="String" array="True"/>
+            <parameter name="hotelc2" type="String" array="True"/>
+            <parameter name="hotelc3" type="String" array="True"/>
+            <parameter name="hotelc4" type="String" array="True"/>
+            <parameter name="qtyc1" type="Integer" array="True"/>
+            <parameter name="qtyc2" type="Integer" array="True"/>
+            <parameter name="qtyc3" type="Integer" array="True"/>
+            <parameter name="qtyc4" type="Integer" array="True"/>
+            <parameter name="dishlenc1" type="Integer" array="False"/>
+            <parameter name="dishlenc2" type="Integer" array="False"/>
+            <parameter name="dishlenc3" type="Integer" array="False"/>
+            <parameter name="dishlenc4" type="Integer" array="False"/>
+            <parameter name="hotellenc1" type="Integer" array="False"/>
+            <parameter name="hotellenc2" type="Integer" array="False"/>
+            <parameter name="hotellenc3" type="Integer" array="False"/>
+            <parameter name="hotellenc4" type="Integer" array="False"/>
+            <parameter name="itemcostc1" type="Real" array="True"/>
+            <parameter name="itemcostc2" type="Real" array="True"/>
+            <parameter name="itemcostc3" type="Real" array="True"/>
+            <parameter name="itemcostc4" type="Real" array="True"/>
+            <parameter name="customerbufferqty" type="Integer" array="True"/>
+            <parameter name="customerbuffername" type="String" array="True"/>
+            <parameter name="customerbufferamount" type="Real" array="True"/>
+            <parameter name="customerbufferhotelname" type="String" array="True"/>
+            <parameter name="customerbuffercost" type="Real" array="True"/>
+            <parameter name="customerbfrlen" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;ADMIN&quot; &amp;tochar(13)&amp;&quot;=======&quot;&amp;TOCHAR(13)&amp;&quot;1.ALTER FOOD DETAILS&quot;&amp;TOCHAR(13)&amp;&quot;2.ALTER HOTEL DETAILS&quot;" newline="True"/>
+            <declare name="alter" type="Integer" array="False" size=""/>
+            <input variable="alter"/>
+            <if expression="alter==1">
+                <then>
+                    <call expression="alterfooddetails(dishc1,dishc2,dishc3,dishc4,hotelc1,hotelc2,hotelc3,hotelc4,dishlenc1,dishlenc2,dishlenc3,dishlenc4,hotellenc1,hotellenc2,hotellenc3,hotellenc4,itemcostc1,itemcostc2,itemcostc3,itemcostc4)"/>
+                </then>
+                <else>
+                    <if expression="alter==2">
+                        <then>
+                            <call expression="alterhoteldetails(dishc1,dishc2,dishc3,dishc4,hotelc1,hotelc2,hotelc3,hotelc4,dishlenc1,dishlenc2,dishlenc3,dishlenc4,hotellenc1,hotellenc2,hotellenc3,hotellenc4,itemcostc1,itemcostc2,itemcostc3,itemcostc4)"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;NOT FOUND&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="alterfooddetails" type="None" variable="">
+        <parameters>
+            <parameter name="dishc1" type="String" array="True"/>
+            <parameter name="dishc2" type="String" array="True"/>
+            <parameter name="dishc3" type="String" array="True"/>
+            <parameter name="dishc4" type="String" array="True"/>
+            <parameter name="hotelc1" type="String" array="True"/>
+            <parameter name="hotelc2" type="String" array="True"/>
+            <parameter name="hotelc3" type="String" array="True"/>
+            <parameter name="hotelc4" type="String" array="True"/>
+            <parameter name="dishlenc1" type="Integer" array="False"/>
+            <parameter name="dishlenc2" type="Integer" array="False"/>
+            <parameter name="dishlenc3" type="Integer" array="False"/>
+            <parameter name="dishlenc4" type="Integer" array="False"/>
+            <parameter name="hotellenc1" type="Integer" array="False"/>
+            <parameter name="hotellenc2" type="Integer" array="False"/>
+            <parameter name="hotellenc3" type="Integer" array="False"/>
+            <parameter name="hotellenc4" type="Integer" array="False"/>
+            <parameter name="itemcostc1" type="Real" array="True"/>
+            <parameter name="itemcostc2" type="Real" array="True"/>
+            <parameter name="itemcostc3" type="Real" array="True"/>
+            <parameter name="itemcostc4" type="Real" array="True"/>
+        </parameters>
+        <body>
+            <declare name="choice, i, j, ch, s" type="Integer" array="False" size=""/>
+            <assign variable="s" expression="1"/>
+            <declare name="dishname" type="String" array="False" size=""/>
+            <declare name="cost" type="Real" array="False" size=""/>
+            <do expression="(choice&lt;=0)||(choice&gt;3)">
+                <output expression="&quot;1.add&quot;&amp;Tochar(13)&amp;&quot;2.alter&quot;&amp;Tochar(13)&amp;&quot;3.delete&quot;" newline="True"/>
+                <input variable="choice"/>
+                <if expression="choice ==1">
+                    <then>
+                        <do expression="(i&lt;=0)||(i&gt;4)">
+                            <output expression="&quot;enter to which cuisine you want to add&quot;" newline="False"/>
+                            <output expression="tochar(13)&amp;  &quot;1.South Indian&quot; &amp;tochar(13)&amp; &quot;2.North India&quot; &amp;tochar(13)&amp;  &quot;3.Chinese or Italian&quot;  &amp;tochar(13)&amp; &quot;4.Fast foods and beverages&quot;" newline="True"/>
+                            <input variable="i"/>
+                        </do>
+                        <if expression="i==1">
+                            <then>
+                                <if expression="dishc1[dishlenc1-1]==&quot; &quot;">
+                                    <then>
+                                        <output expression="&quot;enter name of dish item&quot;" newline="True"/>
+                                        <input variable="dishname"/>
+                                        <do expression="cost==0">
+                                            <output expression="&quot;enter cost of dish&quot;" newline="True"/>
+                                            <input variable="cost"/>
+                                        </do>
+                                        <assign variable="j" expression="0"/>
+                                        <for variable="i" start="0" end="dishlenc1-1" direction="inc" step="1">
+                                            <if expression="dishc1[i]!=&quot; &quot;">
+                                                <then>
+                                                    <assign variable="j" expression="i"/>
+                                                </then>
+                                                <else/>
+                                            </if>
+                                        </for>
+                                        <assign variable="dishc1[j+1]" expression="dishname"/>
+                                        <assign variable="itemcostc1[j+1]" expression="cost"/>
+                                    </then>
+                                    <else>
+                                        <output expression="&quot;stack overflow&quot;" newline="True"/>
+                                    </else>
+                                </if>
+                            </then>
+                            <else>
+                                <if expression="i==2">
+                                    <then>
+                                        <if expression="dishc2[dishlenc2-1]==&quot; &quot;">
+                                            <then>
+                                                <output expression="&quot;enter name of dish item&quot;" newline="True"/>
+                                                <input variable="dishname"/>
+                                                <do expression="cost==0">
+                                                    <output expression="&quot;enter cost of dish&quot;" newline="True"/>
+                                                    <input variable="cost"/>
+                                                </do>
+                                                <assign variable="j" expression="0"/>
+                                                <for variable="i" start="0" end="dishlenc2-1" direction="inc" step="1">
+                                                    <if expression="dishc2[i]!=&quot; &quot;">
+                                                        <then>
+                                                            <assign variable="j" expression="i"/>
+                                                        </then>
+                                                        <else/>
+                                                    </if>
+                                                </for>
+                                                <assign variable="dishc2[j+1]" expression="dishname"/>
+                                                <assign variable="itemcostc2[j+1]" expression="cost"/>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;stack overflow&quot;" newline="True"/>
+                                            </else>
+                                        </if>
+                                    </then>
+                                    <else>
+                                        <if expression="i==3">
+                                            <then>
+                                                <if expression="dishc3[dishlenc3-1]==&quot; &quot;">
+                                                    <then>
+                                                        <output expression="&quot;enter name of dish item&quot;" newline="True"/>
+                                                        <input variable="dishname"/>
+                                                        <do expression="cost==0">
+                                                            <output expression="&quot;enter cost of dish&quot;" newline="True"/>
+                                                            <input variable="cost"/>
+                                                        </do>
+                                                        <assign variable="j" expression="0"/>
+                                                        <for variable="i" start="0" end="dishlenc3-1" direction="inc" step="1">
+                                                            <if expression="dishc3[i]!=&quot; &quot;">
+                                                                <then>
+                                                                    <assign variable="j" expression="i"/>
+                                                                </then>
+                                                                <else/>
+                                                            </if>
+                                                        </for>
+                                                        <assign variable="dishc3[j+1]" expression="dishname"/>
+                                                        <assign variable="itemcostc3[j+1]" expression="cost"/>
+                                                    </then>
+                                                    <else>
+                                                        <output expression="&quot;stack overflow&quot;" newline="True"/>
+                                                    </else>
+                                                </if>
+                                            </then>
+                                            <else>
+                                                <if expression="i==4">
+                                                    <then>
+                                                        <if expression="dishc4[dishlenc4-1]==&quot; &quot;">
+                                                            <then>
+                                                                <output expression="&quot;enter name of dish item&quot;" newline="True"/>
+                                                                <input variable="dishname"/>
+                                                                <do expression="cost==0">
+                                                                    <output expression="&quot;enter cost of dish&quot;" newline="True"/>
+                                                                    <input variable="cost"/>
+                                                                </do>
+                                                                <assign variable="j" expression="0"/>
+                                                                <for variable="i" start="0" end="dishlenc4-1" direction="inc" step="1">
+                                                                    <if expression="dishc4[i]!=&quot; &quot;">
+                                                                        <then>
+                                                                            <assign variable="j" expression="i"/>
+                                                                        </then>
+                                                                        <else/>
+                                                                    </if>
+                                                                </for>
+                                                                <assign variable="dishc4[j+1]" expression="dishname"/>
+                                                                <assign variable="itemcostc4[j+1]" expression="cost"/>
+                                                            </then>
+                                                            <else>
+                                                                <output expression="&quot;stack overflow&quot;" newline="True"/>
+                                                            </else>
+                                                        </if>
+                                                    </then>
+                                                    <else/>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                        <output expression="&quot;ADDED SUCCESSFULL :)&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="choice==2">
+                            <then>
+                                <do expression="(i&lt;=0)||(i&gt;4)">
+                                    <output expression="&quot;enter to which cuisine you want to edit&quot;" newline="False"/>
+                                    <output expression="tochar(13)&amp;  &quot;1.South Indian&quot; &amp;tochar(13)&amp; &quot;2.North India&quot; &amp;tochar(13)&amp;  &quot;3.Chinese or Italian&quot;  &amp;tochar(13)&amp; &quot;4.Fast foods and beverages&quot;" newline="True"/>
+                                    <input variable="i"/>
+                                </do>
+                                <if expression="i==1">
+                                    <then>
+                                        <assign variable="i" expression="0"/>
+                                        <while expression="(i&lt;dishlenc1)&amp;&amp;s==1">
+                                            <if expression="dishc1[i]==&quot; &quot;">
+                                                <then>
+                                                    <assign variable="s" expression="0"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="(i+1)&amp;&quot;.&quot;&amp;dishc1[i]&amp;&quot;......Rs&quot;&amp;itemcostc1[i]" newline="True"/>
+                                                </else>
+                                            </if>
+                                            <assign variable="i" expression="i+1"/>
+                                        </while>
+                                        <do expression="(i&lt;=0)||(i&gt;dishlenc1)">
+                                            <output expression="&quot;enter dish number to edit&quot;" newline="True"/>
+                                            <input variable="i"/>
+                                        </do>
+                                        <assign variable="i" expression="i-1"/>
+                                        <do expression="(ch&lt;1)||(ch&gt;2)">
+                                            <output expression="&quot;what would you like to edit 1.name 2.cost&quot;" newline="True"/>
+                                            <input variable="ch"/>
+                                            <if expression="ch==1">
+                                                <then>
+                                                    <output expression="&quot;enter number to edit&quot;" newline="True"/>
+                                                    <input variable="j"/>
+                                                    <assign variable="j" expression="j-1"/>
+                                                    <output expression="&quot;enter new name&quot;" newline="True"/>
+                                                    <input variable="dishname"/>
+                                                    <assign variable="dishc1[j]" expression="dishname"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="ch==2">
+                                                        <then>
+                                                            <output expression="&quot;enter number to edit&quot;" newline="True"/>
+                                                            <input variable="j"/>
+                                                            <assign variable="j" expression="j-1"/>
+                                                            <output expression="&quot;enter new cost&quot;" newline="True"/>
+                                                            <input variable="cost"/>
+                                                            <assign variable="itemcostc1[j]" expression="cost"/>
+                                                        </then>
+                                                        <else/>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </do>
+                                    </then>
+                                    <else>
+                                        <if expression="i==2">
+                                            <then>
+                                                <assign variable="i" expression="0"/>
+                                                <while expression="(i&lt;dishlenc2)&amp;&amp;s==1">
+                                                    <if expression="dishc2[i]==&quot; &quot;">
+                                                        <then>
+                                                            <assign variable="s" expression="0"/>
+                                                        </then>
+                                                        <else>
+                                                            <output expression="(i+1)&amp;&quot;.&quot;&amp;dishc2[i]&amp;&quot;......Rs&quot;&amp;itemcostc2[i]" newline="True"/>
+                                                        </else>
+                                                    </if>
+                                                    <assign variable="i" expression="i+1"/>
+                                                </while>
+                                                <do expression="(i&lt;=0)||(i&gt;dishlenc2)">
+                                                    <output expression="&quot;enter dish number to edit&quot;" newline="True"/>
+                                                    <input variable="i"/>
+                                                </do>
+                                                <assign variable="i" expression="i-1"/>
+                                                <do expression="(ch&lt;1)||(ch&gt;2)">
+                                                    <output expression="&quot;what would you like to edit 1.name 2.cost&quot;" newline="True"/>
+                                                    <input variable="ch"/>
+                                                    <if expression="ch==1">
+                                                        <then>
+                                                            <output expression="&quot;enter number to edit&quot;" newline="True"/>
+                                                            <input variable="j"/>
+                                                            <assign variable="j" expression="j-1"/>
+                                                            <output expression="&quot;enter new name&quot;" newline="True"/>
+                                                            <input variable="dishname"/>
+                                                            <assign variable="dishc2[j]" expression="dishname"/>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="ch==2">
+                                                                <then>
+                                                                    <output expression="&quot;enter number to edit&quot;" newline="True"/>
+                                                                    <input variable="j"/>
+                                                                    <assign variable="j" expression="j-1"/>
+                                                                    <output expression="&quot;enter new cost&quot;" newline="True"/>
+                                                                    <input variable="cost"/>
+                                                                    <assign variable="itemcostc2[j]" expression="cost"/>
+                                                                </then>
+                                                                <else/>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </do>
+                                            </then>
+                                            <else>
+                                                <if expression="i==3">
+                                                    <then>
+                                                        <assign variable="i" expression="0"/>
+                                                        <while expression="(i&lt;dishlenc3)&amp;&amp;s==1">
+                                                            <if expression="dishc3[i]==&quot; &quot;">
+                                                                <then>
+                                                                    <assign variable="s" expression="0"/>
+                                                                </then>
+                                                                <else>
+                                                                    <output expression="(i+1)&amp;&quot;.&quot;&amp;dishc3[i]&amp;&quot;......Rs&quot;&amp;itemcostc3[i]" newline="True"/>
+                                                                </else>
+                                                            </if>
+                                                            <assign variable="i" expression="i+1"/>
+                                                        </while>
+                                                        <do expression="(i&lt;=0)||(i&gt;dishlenc3)">
+                                                            <output expression="&quot;enter dish number to edit&quot;" newline="True"/>
+                                                            <input variable="i"/>
+                                                        </do>
+                                                        <assign variable="i" expression="i-1"/>
+                                                        <do expression="(ch&lt;1)||(ch&gt;2)">
+                                                            <output expression="&quot;what would you like to edit 1.name 2.cost&quot;" newline="True"/>
+                                                            <input variable="ch"/>
+                                                            <if expression="ch==1">
+                                                                <then>
+                                                                    <output expression="&quot;enter number to edit&quot;" newline="True"/>
+                                                                    <input variable="j"/>
+                                                                    <assign variable="j" expression="j-1"/>
+                                                                    <output expression="&quot;enter new name&quot;" newline="True"/>
+                                                                    <input variable="dishname"/>
+                                                                    <assign variable="dishc3[j]" expression="dishname"/>
+                                                                </then>
+                                                                <else>
+                                                                    <if expression="ch==2">
+                                                                        <then>
+                                                                            <output expression="&quot;enter number to edit&quot;" newline="True"/>
+                                                                            <input variable="j"/>
+                                                                            <assign variable="j" expression="j-1"/>
+                                                                            <output expression="&quot;enter new cost&quot;" newline="True"/>
+                                                                            <input variable="cost"/>
+                                                                            <assign variable="itemcostc3[j]" expression="cost"/>
+                                                                        </then>
+                                                                        <else/>
+                                                                    </if>
+                                                                </else>
+                                                            </if>
+                                                        </do>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="i==4">
+                                                            <then>
+                                                                <assign variable="i" expression="0"/>
+                                                                <while expression="(i&lt;dishlenc4)&amp;&amp;s==1">
+                                                                    <if expression="dishc4[i]==&quot; &quot;">
+                                                                        <then>
+                                                                            <assign variable="s" expression="0"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <output expression="(i+1)&amp;&quot;.&quot;&amp;dishc4[i]&amp;&quot;......Rs&quot;&amp;itemcostc4[i]" newline="True"/>
+                                                                        </else>
+                                                                    </if>
+                                                                    <assign variable="i" expression="i+1"/>
+                                                                </while>
+                                                                <do expression="(i&lt;=0)||(i&gt;dishlenc4)">
+                                                                    <output expression="&quot;enter dish number to edit&quot;" newline="True"/>
+                                                                    <input variable="i"/>
+                                                                </do>
+                                                                <assign variable="i" expression="i-1"/>
+                                                                <do expression="(ch&lt;1)||(ch&gt;2)">
+                                                                    <output expression="&quot;what would you like to edit 1.name 2.cost&quot;" newline="True"/>
+                                                                    <input variable="ch"/>
+                                                                    <if expression="ch==1">
+                                                                        <then>
+                                                                            <output expression="&quot;enter number to edit&quot;" newline="True"/>
+                                                                            <input variable="j"/>
+                                                                            <assign variable="j" expression="j-1"/>
+                                                                            <output expression="&quot;enter new name&quot;" newline="True"/>
+                                                                            <input variable="dishname"/>
+                                                                            <assign variable="dishc4[j]" expression="dishname"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <if expression="ch==2">
+                                                                                <then>
+                                                                                    <output expression="&quot;enter number to edit&quot;" newline="True"/>
+                                                                                    <input variable="j"/>
+                                                                                    <assign variable="j" expression="j-1"/>
+                                                                                    <output expression="&quot;enter new cost&quot;" newline="True"/>
+                                                                                    <input variable="cost"/>
+                                                                                    <assign variable="itemcostc4[j]" expression="cost"/>
+                                                                                </then>
+                                                                                <else/>
+                                                                            </if>
+                                                                        </else>
+                                                                    </if>
+                                                                </do>
+                                                            </then>
+                                                            <else/>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                                <output expression="&quot;ALTERED SUCCESSFULLY :)&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <if expression="choice==3">
+                                    <then>
+                                        <do expression="(i&lt;=0)||(i&gt;4)">
+                                            <output expression="&quot;enter to which cuisine you want to delete&quot;" newline="False"/>
+                                            <output expression="tochar(13)&amp;  &quot;1.South Indian&quot; &amp;tochar(13)&amp; &quot;2.North India&quot; &amp;tochar(13)&amp;  &quot;3.Chinese or Italian&quot;  &amp;tochar(13)&amp; &quot;4.Fast foods and beverages&quot;" newline="True"/>
+                                            <input variable="i"/>
+                                        </do>
+                                        <if expression="i==1">
+                                            <then>
+                                                <assign variable="i" expression="0"/>
+                                                <while expression="(i&lt;dishlenc1)&amp;&amp;s==1">
+                                                    <if expression="dishc1[i]==&quot; &quot;">
+                                                        <then>
+                                                            <assign variable="s" expression="0"/>
+                                                        </then>
+                                                        <else>
+                                                            <output expression="(i+1)&amp;&quot;.&quot;&amp;dishc1[i]&amp;&quot;......Rs&quot;&amp;itemcostc1[i]" newline="True"/>
+                                                        </else>
+                                                    </if>
+                                                    <assign variable="i" expression="i+1"/>
+                                                </while>
+                                                <do expression="(i&lt;1)||(i&gt;dishlenc1)">
+                                                    <output expression="&quot;enter number to delete&quot;" newline="True"/>
+                                                    <input variable="i"/>
+                                                </do>
+                                                <assign variable="i" expression="i-1"/>
+                                                <for variable="j" start="i+1" end="dishlenc1-1" direction="inc" step="1">
+                                                    <assign variable="dishc1[j-1]" expression="dishc1[j]"/>
+                                                    <assign variable="itemcostc1[j-1]" expression="itemcostc1[j]"/>
+                                                </for>
+                                                <assign variable="dishc1[dishlenc1-1]" expression="&quot; &quot;"/>
+                                                <assign variable="itemcostc1[dishlenc1-1]" expression="0.0"/>
+                                            </then>
+                                            <else>
+                                                <if expression="i==2">
+                                                    <then>
+                                                        <assign variable="i" expression="0"/>
+                                                        <while expression="(i&lt;dishlenc2)&amp;&amp;s==1">
+                                                            <if expression="dishc2[i]==&quot; &quot;">
+                                                                <then>
+                                                                    <assign variable="s" expression="0"/>
+                                                                </then>
+                                                                <else>
+                                                                    <output expression="(i+1)&amp;&quot;.&quot;&amp;dishc2[i]&amp;&quot;......Rs&quot;&amp;itemcostc2[i]" newline="True"/>
+                                                                </else>
+                                                            </if>
+                                                            <assign variable="i" expression="i+1"/>
+                                                        </while>
+                                                        <do expression="(i&lt;1)||(i&gt;dishlenc2)">
+                                                            <output expression="&quot;enter number to delete&quot;" newline="True"/>
+                                                            <input variable="i"/>
+                                                        </do>
+                                                        <assign variable="i" expression="i-1"/>
+                                                        <for variable="j" start="i+1" end="dishlenc2-1" direction="inc" step="1">
+                                                            <assign variable="dishc2[j-1]" expression="dishc2[j]"/>
+                                                            <assign variable="itemcostc2[j-1]" expression="itemcostc2[j]"/>
+                                                        </for>
+                                                        <assign variable="dishc2[dishlenc2-1]" expression="&quot; &quot;"/>
+                                                        <assign variable="itemcostc2[dishlenc2-1]" expression="0.0"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="i==3">
+                                                            <then>
+                                                                <assign variable="i" expression="0"/>
+                                                                <while expression="(i&lt;dishlenc3)&amp;&amp;s==1">
+                                                                    <if expression="dishc3[i]==&quot; &quot;">
+                                                                        <then>
+                                                                            <assign variable="s" expression="0"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <output expression="(i+1)&amp;&quot;.&quot;&amp;dishc3[i]&amp;&quot;......Rs&quot;&amp;itemcostc3[i]" newline="True"/>
+                                                                        </else>
+                                                                    </if>
+                                                                    <assign variable="i" expression="i+1"/>
+                                                                </while>
+                                                                <do expression="(i&lt;1)||(i&gt;dishlenc3)">
+                                                                    <output expression="&quot;enter number to delete&quot;" newline="True"/>
+                                                                    <input variable="i"/>
+                                                                </do>
+                                                                <assign variable="i" expression="i-1"/>
+                                                                <for variable="j" start="i+1" end="dishlenc3-1" direction="inc" step="1">
+                                                                    <assign variable="dishc3[j-1]" expression="dishc3[j]"/>
+                                                                    <assign variable="itemcostc3[j-1]" expression="itemcostc3[j]"/>
+                                                                </for>
+                                                                <assign variable="dishc3[dishlenc3-1]" expression="&quot; &quot;"/>
+                                                                <assign variable="itemcostc3[dishlenc3-1]" expression="0.0"/>
+                                                            </then>
+                                                            <else>
+                                                                <if expression="i==4">
+                                                                    <then>
+                                                                        <assign variable="i" expression="0"/>
+                                                                        <while expression="(i&lt;dishlenc4)&amp;&amp;s==1">
+                                                                            <if expression="dishc4[i]==&quot; &quot;">
+                                                                                <then>
+                                                                                    <assign variable="s" expression="0"/>
+                                                                                </then>
+                                                                                <else>
+                                                                                    <output expression="(i+1)&amp;&quot;.&quot;&amp;dishc4[i]&amp;&quot;......Rs&quot;&amp;itemcostc4[i]" newline="True"/>
+                                                                                </else>
+                                                                            </if>
+                                                                            <assign variable="i" expression="i+1"/>
+                                                                        </while>
+                                                                        <do expression="(i&lt;1)||(i&gt;dishlenc4)">
+                                                                            <output expression="&quot;enter number to delete&quot;" newline="True"/>
+                                                                            <input variable="i"/>
+                                                                        </do>
+                                                                        <assign variable="i" expression="i-1"/>
+                                                                        <for variable="j" start="i+1" end="dishlenc4-1" direction="inc" step="1">
+                                                                            <assign variable="dishc4[j-1]" expression="dishc4[j]"/>
+                                                                            <assign variable="itemcostc4[j-1]" expression="itemcostc4[j]"/>
+                                                                        </for>
+                                                                        <assign variable="dishc4[dishlenc4-1]" expression="&quot; &quot;"/>
+                                                                        <assign variable="itemcostc4[dishlenc4-1]" expression="0.0"/>
+                                                                    </then>
+                                                                    <else/>
+                                                                </if>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                        <output expression="&quot;DELETED SUCCESSFULLY :)&quot;" newline="True"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </do>
+        </body>
+    </function>
+    <function name="alterhoteldetails" type="None" variable="">
+        <parameters>
+            <parameter name="dishc1" type="String" array="True"/>
+            <parameter name="dishc2" type="String" array="True"/>
+            <parameter name="dishc3" type="String" array="True"/>
+            <parameter name="dishc4" type="String" array="True"/>
+            <parameter name="hotelc1" type="String" array="True"/>
+            <parameter name="hotelc2" type="String" array="True"/>
+            <parameter name="hotelc3" type="String" array="True"/>
+            <parameter name="hotelc4" type="String" array="True"/>
+            <parameter name="dishlenc1" type="Integer" array="False"/>
+            <parameter name="dishlenc2" type="Integer" array="False"/>
+            <parameter name="dishlenc3" type="Integer" array="False"/>
+            <parameter name="dishlenc4" type="Integer" array="False"/>
+            <parameter name="hotellenc1" type="Integer" array="False"/>
+            <parameter name="hotellenc2" type="Integer" array="False"/>
+            <parameter name="hotellenc3" type="Integer" array="False"/>
+            <parameter name="hotellenc4" type="Integer" array="False"/>
+            <parameter name="itemcostc1" type="Real" array="True"/>
+            <parameter name="itemcostc2" type="Real" array="True"/>
+            <parameter name="itemcostc3" type="Real" array="True"/>
+            <parameter name="itemcostc4" type="Real" array="True"/>
+        </parameters>
+        <body>
+            <declare name="i, cuisine, j, choice, cost, pos, s" type="Integer" array="False" size=""/>
+            <assign variable="cuisine" expression="0"/>
+            <assign variable="s" expression="1"/>
+            <declare name="hotelname" type="String" array="False" size=""/>
+            <do expression="(cuisine&gt;4)||(cuisine&lt;0)">
+                <do expression="(choice&lt;1)||(choice&gt;3)">
+                    <output expression="&quot;enter option 1.add 2.alter 3.delete&quot;" newline="True"/>
+                    <input variable="choice"/>
+                </do>
+                <output expression="&quot; Types of hotels available are&quot; &amp;tochar(13)&amp; &quot;1.South Indian hotel&quot; &amp;tochar(13)&amp; &quot;2.North Indian Resaurant&quot; &amp;tochar(13)&amp; &quot;3.Chopsticks&quot; &amp;tochar(13)&amp; &quot;4.ZZ Fast foods&quot;" newline="True"/>
+                <if expression="choice ==1">
+                    <then>
+                        <do expression="(choice&lt;=0)||(choice&gt;4)">
+                            <input variable="choice"/>
+                        </do>
+                        <if expression="choice==1">
+                            <then>
+                                <if expression="hotelc1[hotellenc1-1]==&quot; &quot;">
+                                    <then>
+                                        <output expression="&quot;enter new name &quot;" newline="True"/>
+                                        <input variable="hotelname"/>
+                                        <assign variable="pos" expression="0"/>
+                                        <for variable="i" start="0" end="hotellenc1-1" direction="inc" step="1">
+                                            <if expression="hotelc1[i]!=&quot; &quot;">
+                                                <then>
+                                                    <assign variable="pos" expression="i"/>
+                                                </then>
+                                                <else/>
+                                            </if>
+                                        </for>
+                                        <assign variable="hotelc1[pos]" expression="hotelname"/>
+                                    </then>
+                                    <else>
+                                        <output expression="&quot;stack overflow&quot;" newline="True"/>
+                                    </else>
+                                </if>
+                            </then>
+                            <else>
+                                <if expression="choice==2">
+                                    <then>
+                                        <if expression="hotelc2[hotellenc2-1]==&quot; &quot;">
+                                            <then>
+                                                <output expression="&quot;enter new name &quot;" newline="True"/>
+                                                <input variable="hotelname"/>
+                                                <assign variable="pos" expression="0"/>
+                                                <for variable="i" start="0" end="hotellenc2-1" direction="inc" step="1">
+                                                    <if expression="hotelc2[i]!=&quot; &quot;">
+                                                        <then>
+                                                            <assign variable="pos" expression="i"/>
+                                                        </then>
+                                                        <else/>
+                                                    </if>
+                                                </for>
+                                                <assign variable="hotelc2[pos]" expression="hotelname"/>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;stack overflow&quot;" newline="True"/>
+                                            </else>
+                                        </if>
+                                    </then>
+                                    <else>
+                                        <if expression="choice==3">
+                                            <then>
+                                                <if expression="hotelc3[hotellenc3-1]==&quot; &quot;">
+                                                    <then>
+                                                        <output expression="&quot;enter new name &quot;" newline="True"/>
+                                                        <input variable="hotelname"/>
+                                                        <assign variable="pos" expression="0"/>
+                                                        <for variable="i" start="0" end="hotellenc3-1" direction="inc" step="1">
+                                                            <if expression="hotelc3[i]!=&quot; &quot;">
+                                                                <then>
+                                                                    <assign variable="pos" expression="i"/>
+                                                                </then>
+                                                                <else/>
+                                                            </if>
+                                                        </for>
+                                                        <assign variable="hotelc3[pos]" expression="hotelname"/>
+                                                    </then>
+                                                    <else>
+                                                        <output expression="&quot;stack overflow&quot;" newline="True"/>
+                                                    </else>
+                                                </if>
+                                            </then>
+                                            <else>
+                                                <if expression="choice==4">
+                                                    <then>
+                                                        <if expression="hotelc4[hotellenc4-1]==&quot; &quot;">
+                                                            <then>
+                                                                <output expression="&quot;enter new name &quot;" newline="True"/>
+                                                                <input variable="hotelname"/>
+                                                                <assign variable="pos" expression="0"/>
+                                                                <for variable="i" start="0" end="hotellenc4-1" direction="inc" step="1">
+                                                                    <if expression="hotelc4[i]!=&quot; &quot;">
+                                                                        <then>
+                                                                            <assign variable="pos" expression="i"/>
+                                                                        </then>
+                                                                        <else/>
+                                                                    </if>
+                                                                </for>
+                                                                <assign variable="hotelc4[pos]" expression="hotelname"/>
+                                                            </then>
+                                                            <else>
+                                                                <output expression="&quot;stack overflow&quot;" newline="True"/>
+                                                            </else>
+                                                        </if>
+                                                    </then>
+                                                    <else/>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                        <output expression="&quot;ADDED SUCCESSFULLY :)&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="choice==2">
+                            <then>
+                                <do expression="(choice&lt;=0)||(choice&gt;4)">
+                                    <input variable="choice"/>
+                                </do>
+                                <if expression="choice==1">
+                                    <then>
+                                        <assign variable="i" expression="0"/>
+                                        <while expression="(i&lt;hotellenc1)&amp;&amp;s==1">
+                                            <if expression="hotelc1[i]==&quot; &quot;">
+                                                <then>
+                                                    <assign variable="s" expression="0"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="(i+1)&amp;&quot;.&quot;&amp;hotelc1[i]" newline="True"/>
+                                                </else>
+                                            </if>
+                                            <assign variable="i" expression="i+1"/>
+                                        </while>
+                                        <output expression="&quot;enter number to alter&quot;" newline="True"/>
+                                        <do expression="(j&lt;=0)&amp;(j&gt;hotellenc1)">
+                                            <input variable="j"/>
+                                        </do>
+                                        <output expression="&quot;enter new name for hotel&quot;" newline="True"/>
+                                        <input variable="hotelname"/>
+                                        <assign variable="hotelc1[j-1]" expression="hotelname"/>
+                                    </then>
+                                    <else>
+                                        <if expression="choice==2">
+                                            <then>
+                                                <assign variable="i" expression="0"/>
+                                                <while expression="(i&lt;hotellenc2)&amp;&amp;s==1">
+                                                    <if expression="hotelc2[i]==&quot; &quot;">
+                                                        <then>
+                                                            <assign variable="s" expression="0"/>
+                                                        </then>
+                                                        <else>
+                                                            <output expression="(i+1)&amp;&quot;.&quot;&amp;hotelc2[i]" newline="True"/>
+                                                        </else>
+                                                    </if>
+                                                    <assign variable="i" expression="i+1"/>
+                                                </while>
+                                                <output expression="&quot;enter number to alter&quot;" newline="True"/>
+                                                <do expression="(j&lt;=0)&amp;(j&gt;hotellenc2)">
+                                                    <input variable="j"/>
+                                                </do>
+                                                <output expression="&quot;enter new name for hotel&quot;" newline="True"/>
+                                                <input variable="hotelname"/>
+                                                <assign variable="hotelc2[j-1]" expression="hotelname"/>
+                                            </then>
+                                            <else>
+                                                <if expression="choice==3">
+                                                    <then>
+                                                        <assign variable="i" expression="0"/>
+                                                        <while expression="(i&lt;hotellenc3)&amp;&amp;s==1">
+                                                            <if expression="hotelc3[i]==&quot; &quot;">
+                                                                <then>
+                                                                    <assign variable="s" expression="0"/>
+                                                                </then>
+                                                                <else>
+                                                                    <output expression="(i+1)&amp;&quot;.&quot;&amp;hotelc3[i]" newline="True"/>
+                                                                </else>
+                                                            </if>
+                                                            <assign variable="i" expression="i+1"/>
+                                                        </while>
+                                                        <output expression="&quot;enter number to alter&quot;" newline="True"/>
+                                                        <do expression="(j&lt;=0)&amp;(j&gt;hotellenc3)">
+                                                            <input variable="j"/>
+                                                        </do>
+                                                        <output expression="&quot;enter new name for hotel&quot;" newline="True"/>
+                                                        <input variable="hotelname"/>
+                                                        <assign variable="hotelc3[j-1]" expression="hotelname"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="choice==4">
+                                                            <then>
+                                                                <assign variable="i" expression="0"/>
+                                                                <while expression="(i&lt;hotellenc4)&amp;&amp;s==1">
+                                                                    <if expression="hotelc4[i]==&quot; &quot;">
+                                                                        <then>
+                                                                            <assign variable="s" expression="0"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <output expression="(i+1)&amp;&quot;.&quot;&amp;hotelc4[i]" newline="True"/>
+                                                                        </else>
+                                                                    </if>
+                                                                    <assign variable="i" expression="i+1"/>
+                                                                </while>
+                                                                <output expression="&quot;enter number to alter&quot;" newline="True"/>
+                                                                <do expression="(j&lt;=0)&amp;(j&gt;hotellenc4)">
+                                                                    <input variable="j"/>
+                                                                </do>
+                                                                <output expression="&quot;enter new name for hotel&quot;" newline="True"/>
+                                                                <input variable="hotelname"/>
+                                                                <assign variable="hotelc4[j-1]" expression="hotelname"/>
+                                                            </then>
+                                                            <else/>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                                <output expression="&quot;ALTERED SUCCESSFULLY :)&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <if expression="choice==3">
+                                    <then>
+                                        <do expression="(choice&lt;=0)||(choice&gt;4)">
+                                            <input variable="choice"/>
+                                        </do>
+                                        <if expression="choice==1">
+                                            <then>
+                                                <if expression="hotelc1[0]!=&quot; &quot;">
+                                                    <then>
+                                                        <assign variable="i" expression="0"/>
+                                                        <while expression="(i&lt;hotellenc1)&amp;&amp;s==1">
+                                                            <if expression="hotelc1[i]==&quot; &quot;">
+                                                                <then>
+                                                                    <assign variable="s" expression="0"/>
+                                                                </then>
+                                                                <else>
+                                                                    <output expression="(i+1)&amp;&quot;.&quot;&amp;hotelc1[i]" newline="True"/>
+                                                                </else>
+                                                            </if>
+                                                            <assign variable="i" expression="i+1"/>
+                                                        </while>
+                                                        <output expression="&quot;enter number to delete&quot;" newline="True"/>
+                                                        <do expression="(j&lt;=0)&amp;&amp;(j&gt;hotellenc1)">
+                                                            <input variable="j"/>
+                                                        </do>
+                                                        <assign variable="j" expression="j-1"/>
+                                                        <for variable="i" start="j+1" end="hotellenc1-1" direction="inc" step="1">
+                                                            <assign variable="hotelc1[i-1]" expression="hotelc1[i]"/>
+                                                        </for>
+                                                        <assign variable="hotelc1[hotellenc1-1]" expression="&quot; &quot;"/>
+                                                    </then>
+                                                    <else>
+                                                        <output expression="&quot;no hotels found&quot;" newline="True"/>
+                                                    </else>
+                                                </if>
+                                            </then>
+                                            <else>
+                                                <if expression="choice==2">
+                                                    <then>
+                                                        <if expression="hotelc2[0]!=&quot; &quot;">
+                                                            <then>
+                                                                <assign variable="i" expression="0"/>
+                                                                <while expression="(i&lt;hotellenc2)&amp;&amp;s==1">
+                                                                    <if expression="hotelc2[i]==&quot; &quot;">
+                                                                        <then>
+                                                                            <assign variable="s" expression="0"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <output expression="(i+1)&amp;&quot;.&quot;&amp;hotelc2[i]" newline="True"/>
+                                                                        </else>
+                                                                    </if>
+                                                                    <assign variable="i" expression="i+1"/>
+                                                                </while>
+                                                                <output expression="&quot;enter number to delete&quot;" newline="True"/>
+                                                                <do expression="(j&lt;=0)&amp;&amp;(j&gt;hotellenc2)">
+                                                                    <input variable="j"/>
+                                                                </do>
+                                                                <assign variable="j" expression="j-1"/>
+                                                                <for variable="i" start="j+1" end="hotellenc2-1" direction="inc" step="1">
+                                                                    <assign variable="hotelc2[i-1]" expression="hotelc2[i]"/>
+                                                                </for>
+                                                                <assign variable="hotelc2[hotellenc2-1]" expression="&quot; &quot;"/>
+                                                            </then>
+                                                            <else>
+                                                                <output expression="&quot;no hotels found&quot;" newline="True"/>
+                                                            </else>
+                                                        </if>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="choice==3">
+                                                            <then>
+                                                                <if expression="hotelc3[0]!=&quot; &quot;">
+                                                                    <then>
+                                                                        <assign variable="i" expression="0"/>
+                                                                        <while expression="(i&lt;hotellenc3)&amp;&amp;s==1">
+                                                                            <if expression="hotelc3[i]==&quot; &quot;">
+                                                                                <then>
+                                                                                    <assign variable="s" expression="0"/>
+                                                                                </then>
+                                                                                <else>
+                                                                                    <output expression="(i+1)&amp;&quot;.&quot;&amp;hotelc3[i]" newline="True"/>
+                                                                                </else>
+                                                                            </if>
+                                                                            <assign variable="i" expression="i+1"/>
+                                                                        </while>
+                                                                        <output expression="&quot;enter number to delete&quot;" newline="True"/>
+                                                                        <do expression="(j&lt;=0)&amp;&amp;(j&gt;hotellenc3)">
+                                                                            <input variable="j"/>
+                                                                        </do>
+                                                                        <assign variable="j" expression="j-1"/>
+                                                                        <for variable="i" start="j+1" end="hotellenc3-1" direction="inc" step="1">
+                                                                            <assign variable="hotelc3[i-1]" expression="hotelc3[i]"/>
+                                                                        </for>
+                                                                        <assign variable="hotelc3[hotellenc3-1]" expression="&quot; &quot;"/>
+                                                                    </then>
+                                                                    <else>
+                                                                        <output expression="&quot;no hotels found&quot;" newline="True"/>
+                                                                    </else>
+                                                                </if>
+                                                            </then>
+                                                            <else>
+                                                                <if expression="choice==4">
+                                                                    <then>
+                                                                        <if expression="hotelc4[0]!=&quot; &quot;">
+                                                                            <then>
+                                                                                <assign variable="i" expression="0"/>
+                                                                                <while expression="(i&lt;hotellenc4)&amp;&amp;s==1">
+                                                                                    <if expression="hotelc4[i]==&quot; &quot;">
+                                                                                        <then>
+                                                                                            <assign variable="s" expression="0"/>
+                                                                                        </then>
+                                                                                        <else>
+                                                                                            <output expression="(i+1)&amp;&quot;.&quot;&amp;hotelc4[i]" newline="True"/>
+                                                                                        </else>
+                                                                                    </if>
+                                                                                    <assign variable="i" expression="i+1"/>
+                                                                                </while>
+                                                                                <output expression="&quot;enter number to delete&quot;" newline="True"/>
+                                                                                <do expression="(j&lt;=0)&amp;&amp;(j&gt;hotellenc4)">
+                                                                                    <input variable="j"/>
+                                                                                </do>
+                                                                                <assign variable="j" expression="j-1"/>
+                                                                                <for variable="i" start="j+1" end="hotellenc4-1" direction="inc" step="1">
+                                                                                    <assign variable="hotelc4[i-1]" expression="hotelc4[i]"/>
+                                                                                </for>
+                                                                                <assign variable="hotelc4[hotellenc4-1]" expression="&quot; &quot;"/>
+                                                                            </then>
+                                                                            <else>
+                                                                                <output expression="&quot;no hotels found&quot;" newline="True"/>
+                                                                            </else>
+                                                                        </if>
+                                                                    </then>
+                                                                    <else/>
+                                                                </if>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                        <output expression="&quot;DELETED SUCCESSFULLY :)&quot;" newline="True"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </do>
+        </body>
+    </function>
+    <function name="billing" type="Real" variable="total">
+        <parameters>
+            <parameter name="customerbuffername" type="String" array="True"/>
+            <parameter name="customerbufferamount" type="Real" array="True"/>
+            <parameter name="customerbufferhotelname" type="String" array="True"/>
+            <parameter name="customerbuffercost" type="Real" array="True"/>
+            <parameter name="customerbfrlen" type="Integer" array="False"/>
+            <parameter name="customerbufferqty" type="Integer" array="True"/>
+            <parameter name="termkey" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="total" type="Real" array="False" size=""/>
+            <assign variable="total" expression="0"/>
+            <declare name="i, s, pos" type="Integer" array="False" size=""/>
+            <assign variable="pos" expression="-1"/>
+            <assign variable="s" expression="0"/>
+            <output expression="&quot;=====================BILL=============================&quot;&amp;Tochar(13)&amp;&quot;      s.no   |   hotelname | foodname   |  cost  |  qty | amount&quot;" newline="True"/>
+            <assign variable="i" expression="0"/>
+            <for variable="i" start="0" end="customerbfrlen" direction="inc" step="1">
+                <if expression="customerbuffercost[i]!=0">
+                    <then>
+                        <assign variable="pos" expression="i"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <for variable="i" start="0" end="pos" direction="inc" step="1">
+                <output expression="i+1&amp;&quot; . &quot;&amp;customerbufferhotelname[i]&amp;&quot;| &quot;&amp;customerbuffername[i]&amp;&quot;| &quot;&amp;customerbuffercost[i]&amp;&quot;| &quot;&amp;customerbufferqty[i]&amp;&quot;| &quot;&amp;customerbuffercost[i]*customerbufferqty[i]" newline="True"/>
+                <assign variable="total" expression="total+(customerbuffercost[i]*customerbufferqty[i])"/>
+            </for>
+            <do expression="(i&lt;=0)||(i&gt;2)">
+                <output expression="&quot;to place your order press 1 to add items to your cart press 2&quot;" newline="True"/>
+                <input variable="i"/>
+            </do>
+            <if expression="i==1">
+                <then>
+                    <assign variable="termkey[0]" expression="1"/>
+                </then>
+                <else>
+                    <assign variable="termkey[0]" expression="0"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="cart" type="None" variable="">
+        <parameters>
+            <parameter name="hotelname" type="String" array="False"/>
+            <parameter name="cost" type="Real" array="False"/>
+            <parameter name="customerbufferqty" type="Integer" array="True"/>
+            <parameter name="customerbuffername" type="String" array="True"/>
+            <parameter name="customerbufferamount" type="Real" array="True"/>
+            <parameter name="customerbufferhotelname" type="String" array="True"/>
+            <parameter name="customerbuffercost" type="Real" array="True"/>
+            <parameter name="customerbfrlen" type="Integer" array="False"/>
+            <parameter name="dishname" type="String" array="False"/>
+            <parameter name="qty" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i, position" type="Integer" array="False" size=""/>
+            <declare name="ch" type="String" array="False" size=""/>
+            <assign variable="position" expression="-1"/>
+            <for variable="i" start="0" end="customerbfrlen-1" direction="inc" step="1">
+                <if expression="customerbuffercost[i]!=0">
+                    <then>
+                        <assign variable="position" expression="i"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <assign variable="position" expression="position+1"/>
+            <assign variable="customerbufferqty[position]" expression="qty"/>
+            <assign variable="customerbuffername[position]" expression="dishname"/>
+            <assign variable="customerbufferamount[position]" expression="qty*cost"/>
+            <assign variable="customerbuffercost[position]" expression="cost"/>
+            <assign variable="customerbufferhotelname[position]" expression="hotelname"/>
+        </body>
+    </function>
+    <function name="search" type="None" variable="">
+        <parameters>
+            <parameter name="dishc1" type="String" array="True"/>
+            <parameter name="dishc2" type="String" array="True"/>
+            <parameter name="dishc3" type="String" array="True"/>
+            <parameter name="dishc4" type="String" array="True"/>
+            <parameter name="hotelc1" type="String" array="True"/>
+            <parameter name="hotelc2" type="String" array="True"/>
+            <parameter name="hotelc3" type="String" array="True"/>
+            <parameter name="hotelc4" type="String" array="True"/>
+            <parameter name="qtyc1" type="Integer" array="True"/>
+            <parameter name="qtyc2" type="Integer" array="True"/>
+            <parameter name="qtyc3" type="Integer" array="True"/>
+            <parameter name="qtyc4" type="Integer" array="True"/>
+            <parameter name="dishlenc1" type="Integer" array="False"/>
+            <parameter name="dishlenc2" type="Integer" array="False"/>
+            <parameter name="dishlenc3" type="Integer" array="False"/>
+            <parameter name="dishlenc4" type="Integer" array="False"/>
+            <parameter name="hotellenc1" type="Integer" array="False"/>
+            <parameter name="hotellenc2" type="Integer" array="False"/>
+            <parameter name="hotellenc3" type="Integer" array="False"/>
+            <parameter name="hotellenc4" type="Integer" array="False"/>
+            <parameter name="itemcostc1" type="Real" array="True"/>
+            <parameter name="itemcostc2" type="Real" array="True"/>
+            <parameter name="itemcostc3" type="Real" array="True"/>
+            <parameter name="itemcostc4" type="Real" array="True"/>
+            <parameter name="customerbufferqty" type="Integer" array="True"/>
+            <parameter name="customerbuffername" type="String" array="True"/>
+            <parameter name="customerbufferamount" type="Real" array="True"/>
+            <parameter name="customerbufferhotelname" type="String" array="True"/>
+            <parameter name="customerbuffercost" type="Real" array="True"/>
+            <parameter name="customerbfrlen" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="S" type="Integer" array="False" size=""/>
+            <do expression="S!=1&amp;&amp;S!=2">
+                <output expression="&quot;SEARCH BY:&quot;&amp;TOCHAR(13)&amp;&quot;1.FOOD&quot;&amp;TOCHAR(13)&amp;&quot;2.HOTEL&quot;" newline="True"/>
+                <output expression="&quot;ENTER A VALID OPTION :&quot;" newline="True"/>
+                <input variable="S"/>
+            </do>
+            <if expression="S==1">
+                <then>
+                    <call expression="searchbyfood(dishc1,dishc2,dishc3,dishc4,hotelc1,hotelc2,hotelc3,hotelc4,qtyc1,qtyc2,qtyc3,qtyc4,dishlenc1,dishlenc2,dishlenc3,dishlenc4,hotellenc1,hotellenc2,hotellenc3,hotellenc4,itemcostc1,itemcostc2,itemcostc3,itemcostc4,customerbufferqty,customerbuffername,customerbufferamount,customerbufferhotelname,customerbuffercost,customerbfrlen)"/>
+                </then>
+                <else>
+                    <if expression="S==2">
+                        <then>
+                            <call expression="searchbyhotel(dishc1,dishc2,dishc3,dishc4,hotelc1,hotelc2,hotelc3,hotelc4,qtyc1,qtyc2,qtyc3,qtyc4,dishlenc1,dishlenc2,dishlenc3,dishlenc4,hotellenc1,hotellenc2,hotellenc3,hotellenc4,itemcostc1,itemcostc2,itemcostc3,itemcostc4,customerbufferqty,customerbuffername,customerbufferamount,customerbufferhotelname,customerbuffercost,customerbfrlen)"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="searchbyfood" type="None" variable="">
+        <parameters>
+            <parameter name="dishc1" type="String" array="True"/>
+            <parameter name="dishc2" type="String" array="True"/>
+            <parameter name="dishc3" type="String" array="True"/>
+            <parameter name="dishc4" type="String" array="True"/>
+            <parameter name="hotelc1" type="String" array="True"/>
+            <parameter name="hotelc2" type="String" array="True"/>
+            <parameter name="hotelc3" type="String" array="True"/>
+            <parameter name="hotelc4" type="String" array="True"/>
+            <parameter name="qtyc1" type="Integer" array="True"/>
+            <parameter name="qtyc2" type="Integer" array="True"/>
+            <parameter name="qtyc3" type="Integer" array="True"/>
+            <parameter name="qtyc4" type="Integer" array="True"/>
+            <parameter name="dishlenc1" type="Integer" array="False"/>
+            <parameter name="dishlenc2" type="Integer" array="False"/>
+            <parameter name="dishlenc3" type="Integer" array="False"/>
+            <parameter name="dishlenc4" type="Integer" array="False"/>
+            <parameter name="hotellenc1" type="Integer" array="False"/>
+            <parameter name="hotellenc2" type="Integer" array="False"/>
+            <parameter name="hotellenc3" type="Integer" array="False"/>
+            <parameter name="hotellenc4" type="Integer" array="False"/>
+            <parameter name="itemcostc1" type="Real" array="True"/>
+            <parameter name="itemcostc2" type="Real" array="True"/>
+            <parameter name="itemcostc3" type="Real" array="True"/>
+            <parameter name="itemcostc4" type="Real" array="True"/>
+            <parameter name="customerbufferqty" type="Integer" array="True"/>
+            <parameter name="customerbuffername" type="String" array="True"/>
+            <parameter name="customerbufferamount" type="Real" array="True"/>
+            <parameter name="customerbufferhotelname" type="String" array="True"/>
+            <parameter name="customerbuffercost" type="Real" array="True"/>
+            <parameter name="customerbfrlen" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i, s" type="Integer" array="False" size=""/>
+            <assign variable="s" expression="1"/>
+            <declare name="cuisine" type="Integer" array="False" size=""/>
+            <declare name="choice, qty" type="Integer" array="False" size=""/>
+            <do expression="(cuisine&gt;4)||(cuisine&lt;=0)">
+                <output expression="&quot;Variety of food available are:&quot; &amp;tochar(13)&amp;  &quot;1.South Indian&quot; &amp;tochar(13)&amp; &quot;2.North India&quot; &amp;tochar(13)&amp;  &quot;3.Chinese or Italian&quot;  &amp;tochar(13)&amp; &quot;4.Fast foods and beverages&quot;" newline="True"/>
+                <output expression="&quot;enter valid choice&quot;" newline="True"/>
+                <input variable="cuisine"/>
+                <if expression="cuisine==1">
+                    <then>
+                        <assign variable="i" expression="0"/>
+                        <while expression="(i&lt;dishlenc1)&amp;&amp;s==1">
+                            <if expression="dishc1[i]==&quot; &quot;">
+                                <then>
+                                    <assign variable="s" expression="0"/>
+                                </then>
+                                <else>
+                                    <output expression="(i+1)&amp;&quot;.&quot;&amp;dishc1[i]&amp;&quot;......Rs&quot;&amp;itemcostc1[i]" newline="True"/>
+                                </else>
+                            </if>
+                            <assign variable="i" expression="i+1"/>
+                        </while>
+                        <do expression="(choice&lt;=0)||(choice&gt;dishlenc1)">
+                            <output expression="&quot;enter valid choice&quot;" newline="True"/>
+                            <input variable="choice"/>
+                        </do>
+                        <assign variable="s" expression="1"/>
+                        <assign variable="i" expression="0"/>
+                        <while expression="(i&lt;hotellenc1)&amp;&amp;s==1">
+                            <if expression="hotelc1[i]==&quot; &quot;">
+                                <then>
+                                    <assign variable="s" expression="0"/>
+                                </then>
+                                <else>
+                                    <output expression="(i+1)&amp;&quot;.&quot;&amp;hotelc1[i]" newline="True"/>
+                                </else>
+                            </if>
+                            <assign variable="i" expression="i+1"/>
+                        </while>
+                        <do expression="i&gt;(hotellenc1-1)">
+                            <output expression="&quot;enter hotel number&quot;" newline="True"/>
+                            <input variable="i"/>
+                        </do>
+                        <do expression="qty&lt;=0">
+                            <output expression="&quot;enter quantity&quot;" newline="True"/>
+                            <input variable="qty"/>
+                        </do>
+                        <assign variable="qtyc1[choice-1]" expression="qtyc1[choice-1]-qty"/>
+                        <call expression="cart(hotelc1[i-1],itemcostc1[choice-1],customerbufferqty,customerbuffername,customerbufferamount,customerbufferhotelname,customerbuffercost,customerbfrlen,dishc1[choice-1],qty)"/>
+                    </then>
+                    <else>
+                        <if expression="cuisine==2">
+                            <then>
+                                <assign variable="i" expression="0"/>
+                                <while expression="(i&lt;dishlenc2)&amp;&amp;s==1">
+                                    <if expression="dishc2[i]==&quot; &quot;">
+                                        <then>
+                                            <assign variable="s" expression="0"/>
+                                        </then>
+                                        <else>
+                                            <output expression="(i+1)&amp;&quot;.&quot;&amp;dishc2[i]&amp;&quot;......Rs&quot;&amp;itemcostc2[i]" newline="True"/>
+                                        </else>
+                                    </if>
+                                    <assign variable="i" expression="i+1"/>
+                                </while>
+                                <do expression="(choice&lt;=0)||(choice&gt;dishlenc2)">
+                                    <output expression="&quot;enter valid choice&quot;" newline="True"/>
+                                    <input variable="choice"/>
+                                </do>
+                                <assign variable="s" expression="1"/>
+                                <assign variable="i" expression="0"/>
+                                <while expression="(i&lt;hotellenc2)&amp;&amp;s==1">
+                                    <if expression="hotelc2[i]==&quot; &quot;">
+                                        <then>
+                                            <assign variable="s" expression="0"/>
+                                        </then>
+                                        <else>
+                                            <output expression="(i+1)&amp;&quot;.&quot;&amp;hotelc2[i]" newline="True"/>
+                                        </else>
+                                    </if>
+                                    <assign variable="i" expression="i+1"/>
+                                </while>
+                                <do expression="i&gt;(hotellenc2-1)">
+                                    <output expression="&quot;enter hotel number&quot;" newline="True"/>
+                                    <input variable="i"/>
+                                </do>
+                                <do expression="qty&lt;=0">
+                                    <output expression="&quot;enter quantity&quot;" newline="True"/>
+                                    <input variable="qty"/>
+                                </do>
+                                <assign variable="qtyc2[choice-1]" expression="qtyc2[choice-1]-qty"/>
+                                <call expression="cart(hotelc2[i-1],itemcostc2[choice-1],customerbufferqty,customerbuffername,customerbufferamount,customerbufferhotelname,customerbuffercost,customerbfrlen,dishc2[choice-1],qty)"/>
+                            </then>
+                            <else>
+                                <if expression="cuisine==3">
+                                    <then>
+                                        <assign variable="i" expression="0"/>
+                                        <while expression="(i&lt;dishlenc3)&amp;&amp;s==1">
+                                            <if expression="dishc3[i]==&quot; &quot;">
+                                                <then>
+                                                    <assign variable="s" expression="0"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="(i+1)&amp;&quot;.&quot;&amp;dishc3[i]&amp;&quot;......Rs&quot;&amp;itemcostc3[i]" newline="True"/>
+                                                </else>
+                                            </if>
+                                            <assign variable="i" expression="i+1"/>
+                                        </while>
+                                        <do expression="(choice&lt;=0)||(choice&gt;dishlenc3)">
+                                            <output expression="&quot;enter valid choice&quot;" newline="True"/>
+                                            <input variable="choice"/>
+                                        </do>
+                                        <assign variable="s" expression="1"/>
+                                        <assign variable="i" expression="0"/>
+                                        <while expression="(i&lt;hotellenc3)&amp;&amp;s==1">
+                                            <if expression="hotelc3[i]==&quot; &quot;">
+                                                <then>
+                                                    <assign variable="s" expression="0"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="(i+1)&amp;&quot;.&quot;&amp;hotelc3[i]" newline="True"/>
+                                                </else>
+                                            </if>
+                                            <assign variable="i" expression="i+1"/>
+                                        </while>
+                                        <do expression="i&gt;(hotellenc3-1)">
+                                            <output expression="&quot;enter hotel number&quot;" newline="True"/>
+                                            <input variable="i"/>
+                                        </do>
+                                        <do expression="qty&lt;=0">
+                                            <output expression="&quot;enter quantity&quot;" newline="True"/>
+                                            <input variable="qty"/>
+                                        </do>
+                                        <assign variable="qtyc3[choice-1]" expression="qtyc3[choice-1]-qty"/>
+                                        <call expression="cart(hotelc3[i-1],itemcostc3[choice-1],customerbufferqty,customerbuffername,customerbufferamount,customerbufferhotelname,customerbuffercost,customerbfrlen,dishc3[choice-1],qty)"/>
+                                    </then>
+                                    <else>
+                                        <if expression="cuisine==4">
+                                            <then>
+                                                <assign variable="i" expression="0"/>
+                                                <while expression="(i&lt;dishlenc4)&amp;&amp;s==1">
+                                                    <if expression="dishc4[i]==&quot; &quot;">
+                                                        <then>
+                                                            <assign variable="s" expression="0"/>
+                                                        </then>
+                                                        <else>
+                                                            <output expression="(i+1)&amp;&quot;.&quot;&amp;dishc4[i]&amp;&quot;......Rs&quot;&amp;itemcostc4[i]" newline="True"/>
+                                                        </else>
+                                                    </if>
+                                                    <assign variable="i" expression="i+1"/>
+                                                </while>
+                                                <do expression="(choice&lt;=0)||(choice&gt;dishlenc4)">
+                                                    <output expression="&quot;enter valid choice&quot;" newline="True"/>
+                                                    <input variable="choice"/>
+                                                </do>
+                                                <assign variable="s" expression="1"/>
+                                                <assign variable="i" expression="0"/>
+                                                <while expression="(i&lt;hotellenc4)&amp;&amp;s==1">
+                                                    <if expression="hotelc4[i]==&quot; &quot;">
+                                                        <then>
+                                                            <assign variable="s" expression="0"/>
+                                                        </then>
+                                                        <else>
+                                                            <output expression="(i+1)&amp;&quot;.&quot;&amp;hotelc4[i]" newline="True"/>
+                                                        </else>
+                                                    </if>
+                                                    <assign variable="i" expression="i+1"/>
+                                                </while>
+                                                <do expression="i&gt;(hotellenc4-1)">
+                                                    <output expression="&quot;enter hotel number&quot;" newline="True"/>
+                                                    <input variable="i"/>
+                                                </do>
+                                                <do expression="qty&lt;=0">
+                                                    <output expression="&quot;enter quantity&quot;" newline="True"/>
+                                                    <input variable="qty"/>
+                                                </do>
+                                                <assign variable="qtyc4[choice-1]" expression="qtyc4[choice-1]-qty"/>
+                                                <call expression="cart(hotelc4[i-1],itemcostc4[choice-1],customerbufferqty,customerbuffername,customerbufferamount,customerbufferhotelname,customerbuffercost,customerbfrlen,dishc4[choice-1],qty)"/>
+                                            </then>
+                                            <else/>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </do>
+        </body>
+    </function>
+    <function name="searchbyhotel" type="None" variable="">
+        <parameters>
+            <parameter name="dishc1" type="String" array="True"/>
+            <parameter name="dishc2" type="String" array="True"/>
+            <parameter name="dishc3" type="String" array="True"/>
+            <parameter name="dishc4" type="String" array="True"/>
+            <parameter name="hotelc1" type="String" array="True"/>
+            <parameter name="hotelc2" type="String" array="True"/>
+            <parameter name="hotelc3" type="String" array="True"/>
+            <parameter name="hotelc4" type="String" array="True"/>
+            <parameter name="qtyc1" type="Integer" array="True"/>
+            <parameter name="qtyc2" type="Integer" array="True"/>
+            <parameter name="qtyc3" type="Integer" array="True"/>
+            <parameter name="qtyc4" type="Integer" array="True"/>
+            <parameter name="dishlenc1" type="Integer" array="False"/>
+            <parameter name="dishlenc2" type="Integer" array="False"/>
+            <parameter name="dishlenc3" type="Integer" array="False"/>
+            <parameter name="dishlenc4" type="Integer" array="False"/>
+            <parameter name="hotellenc1" type="Integer" array="False"/>
+            <parameter name="hotellenc2" type="Integer" array="False"/>
+            <parameter name="hotellenc3" type="Integer" array="False"/>
+            <parameter name="hotellenc4" type="Integer" array="False"/>
+            <parameter name="itemcostc1" type="Real" array="True"/>
+            <parameter name="itemcostc2" type="Real" array="True"/>
+            <parameter name="itemcostc3" type="Real" array="True"/>
+            <parameter name="itemcostc4" type="Real" array="True"/>
+            <parameter name="customerbufferqty" type="Integer" array="True"/>
+            <parameter name="customerbuffername" type="String" array="True"/>
+            <parameter name="customerbufferamount" type="Real" array="True"/>
+            <parameter name="customerbufferhotelname" type="String" array="True"/>
+            <parameter name="customerbuffercost" type="Real" array="True"/>
+            <parameter name="customerbfrlen" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="cuisine, choice, s" type="Integer" array="False" size=""/>
+            <assign variable="s" expression="1"/>
+            <declare name="qty" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <do expression="(cuisine&gt;4)||(cuisine&lt;=0)">
+                <output expression="&quot; Types of hotels available are&quot; &amp;tochar(13)&amp; &quot;1.South Indian hotel&quot; &amp;tochar(13)&amp; &quot;2.North Indian Resaurant&quot; &amp;tochar(13)&amp; &quot;3.Chopsticks&quot; &amp;tochar(13)&amp; &quot;4.ZZ Fast foods&quot;" newline="True"/>
+                <input variable="cuisine"/>
+                <if expression="cuisine==1">
+                    <then>
+                        <assign variable="i" expression="0"/>
+                        <while expression="(i&lt;hotellenc1)&amp;&amp;s==1">
+                            <if expression="hotelc1[i]==&quot; &quot;">
+                                <then>
+                                    <assign variable="s" expression="0"/>
+                                </then>
+                                <else>
+                                    <output expression="(i+1)&amp;&quot;.&quot;&amp;hotelc1[i]" newline="True"/>
+                                </else>
+                            </if>
+                            <assign variable="i" expression="i+1"/>
+                        </while>
+                        <do expression="i&gt;hotellenc1">
+                            <output expression="&quot;enter hotel number&quot;" newline="True"/>
+                            <input variable="i"/>
+                        </do>
+                        <assign variable="s" expression="1"/>
+                        <assign variable="cuisine" expression="0"/>
+                        <while expression="cuisine&lt;dishlenc1&amp;&amp;s==1">
+                            <if expression="dishc1[cuisine]==&quot; &quot;">
+                                <then>
+                                    <assign variable="s" expression="0"/>
+                                </then>
+                                <else>
+                                    <output expression="(cuisine+1)&amp;&quot;.&quot;&amp;dishc1[cuisine]&amp;&quot;......Rs&quot;&amp;itemcostc1[cuisine]" newline="True"/>
+                                </else>
+                            </if>
+                            <assign variable="cuisine" expression="cuisine+1"/>
+                        </while>
+                        <do expression="choice&gt;dishlenc1-1">
+                            <output expression="&quot;enter dish number&quot;" newline="True"/>
+                            <input variable="choice"/>
+                        </do>
+                        <do expression="qty&lt;=0">
+                            <output expression="&quot;enter quantity&quot;" newline="True"/>
+                            <input variable="qty"/>
+                        </do>
+                        <assign variable="qtyc1[choice-1]" expression="qtyc1[choice-1]-qty"/>
+                        <call expression="cart(hotelc1[i-1],itemcostc1[choice-1],customerbufferqty,customerbuffername,customerbufferamount,customerbufferhotelname,customerbuffercost,customerbfrlen,dishc1[choice-1],qty)"/>
+                        <assign variable="cuisine" expression="1"/>
+                    </then>
+                    <else>
+                        <if expression="cuisine==2">
+                            <then>
+                                <assign variable="i" expression="0"/>
+                                <while expression="(i&lt;hotellenc2)&amp;&amp;s==1">
+                                    <if expression="hotelc2[i]==&quot; &quot;">
+                                        <then>
+                                            <assign variable="s" expression="0"/>
+                                        </then>
+                                        <else>
+                                            <output expression="(i+1)&amp;&quot;.&quot;&amp;hotelc2[i]" newline="True"/>
+                                        </else>
+                                    </if>
+                                    <assign variable="i" expression="i+1"/>
+                                </while>
+                                <do expression="i&gt;hotellenc2">
+                                    <output expression="&quot;enter hotel number&quot;" newline="True"/>
+                                    <input variable="i"/>
+                                </do>
+                                <assign variable="s" expression="1"/>
+                                <assign variable="cuisine" expression="0"/>
+                                <while expression="cuisine&lt;dishlenc2&amp;&amp;s==1">
+                                    <if expression="dishc2[cuisine]==&quot; &quot;">
+                                        <then>
+                                            <assign variable="s" expression="0"/>
+                                        </then>
+                                        <else>
+                                            <output expression="(cuisine+1)&amp;&quot;.&quot;&amp;dishc2[cuisine]&amp;&quot;......Rs&quot;&amp;itemcostc2[cuisine]" newline="True"/>
+                                        </else>
+                                    </if>
+                                    <assign variable="cuisine" expression="cuisine+1"/>
+                                </while>
+                                <do expression="choice&gt;dishlenc2-1">
+                                    <output expression="&quot;enter dish number&quot;" newline="True"/>
+                                    <input variable="choice"/>
+                                </do>
+                                <do expression="qty&lt;=0">
+                                    <output expression="&quot;enter quantity&quot;" newline="True"/>
+                                    <input variable="qty"/>
+                                </do>
+                                <assign variable="qtyc2[choice-1]" expression="qtyc2[choice-1]-qty"/>
+                                <call expression="cart(hotelc2[i-1],itemcostc2[choice-1],customerbufferqty,customerbuffername,customerbufferamount,customerbufferhotelname,customerbuffercost,customerbfrlen,dishc2[choice-1],qty)"/>
+                                <assign variable="cuisine" expression="2"/>
+                            </then>
+                            <else>
+                                <if expression="cuisine==3">
+                                    <then>
+                                        <assign variable="i" expression="0"/>
+                                        <while expression="(i&lt;hotellenc3)&amp;&amp;s==1">
+                                            <if expression="hotelc3[i]==&quot; &quot;">
+                                                <then>
+                                                    <assign variable="s" expression="0"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="(i+1)&amp;&quot;.&quot;&amp;hotelc3[i]" newline="True"/>
+                                                </else>
+                                            </if>
+                                            <assign variable="i" expression="i+1"/>
+                                        </while>
+                                        <do expression="i&gt;hotellenc3">
+                                            <output expression="&quot;enter hotel number&quot;" newline="True"/>
+                                            <input variable="i"/>
+                                        </do>
+                                        <assign variable="s" expression="1"/>
+                                        <assign variable="cuisine" expression="0"/>
+                                        <while expression="cuisine&lt;dishlenc3&amp;&amp;s==1">
+                                            <if expression="dishc3[cuisine]==&quot; &quot;">
+                                                <then>
+                                                    <assign variable="s" expression="0"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="(cuisine+1)&amp;&quot;.&quot;&amp;dishc3[cuisine]&amp;&quot;......Rs&quot;&amp;itemcostc3[cuisine]" newline="True"/>
+                                                </else>
+                                            </if>
+                                            <assign variable="cuisine" expression="cuisine+1"/>
+                                        </while>
+                                        <do expression="choice&gt;dishlenc3-1">
+                                            <output expression="&quot;enter dish number&quot;" newline="True"/>
+                                            <input variable="choice"/>
+                                        </do>
+                                        <do expression="qty&lt;=0">
+                                            <output expression="&quot;enter quantity&quot;" newline="True"/>
+                                            <input variable="qty"/>
+                                        </do>
+                                        <assign variable="qtyc3[choice-1]" expression="qtyc3[choice-1]-qty"/>
+                                        <call expression="cart(hotelc3[i-1],itemcostc3[choice-1],customerbufferqty,customerbuffername,customerbufferamount,customerbufferhotelname,customerbuffercost,customerbfrlen,dishc3[choice-1],qty)"/>
+                                        <assign variable="cuisine" expression="3"/>
+                                    </then>
+                                    <else>
+                                        <if expression="cuisine==4">
+                                            <then>
+                                                <assign variable="i" expression="0"/>
+                                                <while expression="(i&lt;hotellenc4)&amp;&amp;s==1">
+                                                    <if expression="hotelc4[i]==&quot; &quot;">
+                                                        <then>
+                                                            <assign variable="s" expression="0"/>
+                                                        </then>
+                                                        <else>
+                                                            <output expression="(i+1)&amp;&quot;.&quot;&amp;hotelc4[i]" newline="True"/>
+                                                        </else>
+                                                    </if>
+                                                    <assign variable="i" expression="i+1"/>
+                                                </while>
+                                                <do expression="i&gt;hotellenc4">
+                                                    <output expression="&quot;enter hotel number&quot;" newline="True"/>
+                                                    <input variable="i"/>
+                                                </do>
+                                                <assign variable="s" expression="1"/>
+                                                <assign variable="cuisine" expression="0"/>
+                                                <while expression="cuisine&lt;dishlenc4&amp;&amp;s==1">
+                                                    <if expression="dishc4[cuisine]==&quot; &quot;">
+                                                        <then>
+                                                            <assign variable="s" expression="0"/>
+                                                        </then>
+                                                        <else>
+                                                            <output expression="(cuisine+1)&amp;&quot;.&quot;&amp;dishc4[cuisine]&amp;&quot;......Rs&quot;&amp;itemcostc4[cuisine]" newline="True"/>
+                                                        </else>
+                                                    </if>
+                                                    <assign variable="cuisine" expression="cuisine+1"/>
+                                                </while>
+                                                <do expression="choice&gt;dishlenc4-1">
+                                                    <output expression="&quot;enter dish number&quot;" newline="True"/>
+                                                    <input variable="choice"/>
+                                                </do>
+                                                <do expression="qty&lt;=0">
+                                                    <output expression="&quot;enter quantity&quot;" newline="True"/>
+                                                    <input variable="qty"/>
+                                                </do>
+                                                <assign variable="qtyc4[choice-1]" expression="qtyc4[choice-1]-qty"/>
+                                                <call expression="cart(hotelc4[i-1],itemcostc4[choice-1],customerbufferqty,customerbuffername,customerbufferamount,customerbufferhotelname,customerbuffercost,customerbfrlen,dishc4[choice-1],qty)"/>
+                                                <assign variable="cuisine" expression="4"/>
+                                            </then>
+                                            <else/>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </do>
+        </body>
+    </function>
+</flowgorithm>
